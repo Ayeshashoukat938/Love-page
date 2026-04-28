@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Special Day</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      overflow: hidden;
+    }
+
+    .box {
+      margin-top: 80px;
+    }
+
+    h1 {
+      font-size: 45px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    #timer {
+      font-size: 26px;
+      margin-top: 20px;
+    }
+
+    .heart {
+      position: absolute;
+      color: #fff;
+      animation: float 5s infinite;
+      font-size: 20px;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(100vh);}
+      100% {transform: translateY(-10vh);}
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>28 April 2022</h1>
+  <p>First date I have texted you 💖</p>
+  <p id="timer"></p>
+</div>
+
+<script>
+  const startDate = new Date("April 28, 2022 00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    document.getElementById("timer").innerHTML =
+      days + " days " + hours + " hours " + minutes + " minutes together 💕";
+  }, 1000);
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>Our Special Day</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .box {
+      margin-top: 80px;
+    }
+
+    h1 {
+      font-size: 45px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    #timer {
+      font-size: 26px;
+      margin-top: 20px;
+    }
+
+    .heart {
+      position: absolute;
+      color: #00e5ff;
+      animation: float 5s infinite;
+      font-size: 20px;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(100vh);}
+      100% {transform: translateY(-10vh);}
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>28 April 2022</h1>
+  <p>Aaj K din pehli Baar m ne Apko Msg Kia Tha Bilal 💙</p>
+  <p id="timer"></p>
+</div>
+
+<script>
+  const startDate = new Date("April 28, 2022 00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    document.getElementById("timer").innerHTML =
+      days + " days " + hours + " hours " + minutes + " minutes together 💕";
+  }, 1000);
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
